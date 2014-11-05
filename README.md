@@ -13,7 +13,7 @@ $ npm install tcp.js
 ### Server
 
 ```js
-var sockets = require('tcp.js').server(1337);
+var sockets = require('tcp.js').server({host: '0.0.0.0', port: 8105, type: 'html'}); // types: xml json html
 
 sockets.on('connection', function (socket) {
   socket.send('news', { hello: 'world'});
